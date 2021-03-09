@@ -7,6 +7,7 @@
 [![Coverage](https://codecov.io/gh/Pramodh-G/VisualOptim.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/Pramodh-G/VisualOptim.jl)
 
 A Julia port of the [Pytorch-Optim](https://github.com/jettify/pytorch-optimizer) library. Purely pedagogical, but will maybe add Flux Interopability in the future. Stay tuned!
+
 Pure Julia implementations of various Gradient Descent based Optimizers, along with visualizations on some functions listed [here](https://en.wikipedia.org/wiki/Test_functions_for_optimization).
 
 
