@@ -10,5 +10,17 @@ A Julia port of the [Pytorch-Optim](https://github.com/jettify/pytorch-optimizer
 
 Pure Julia implementations of various Gradient Descent based Optimizers, along with visualizations on some functions listed [here](https://en.wikipedia.org/wiki/Test_functions_for_optimization).
 
+The parameters that can be passed to the optimizers are limited to only `Vector` with 2 elements, since the results can only be visualized then. Support for `Vector` with more elements will be added soon.
 
-Gradient Calculations based on [ForwardDiff.jl](https://github.com/JuliaDiff/ForwardDiff.jl)
+Gradient Calculations based on [Zygote.jl](https://github.com/FluxML/Zygote.jl)
+
+## TO-DO
+
+- [ ] `SGD`
+- [ ] Add basic tester functions
+- [ ] Deploy visualizations using binder + Pluto.jl
+- [ ] Other basic Optimizsrs
+- [ ] One Advanced Optimiser
+- [ ] Learning Rate and Weight decays
+- [ ] Composability
+- [ ] Research-y Optimisers

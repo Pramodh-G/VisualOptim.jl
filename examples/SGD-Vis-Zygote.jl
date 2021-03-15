@@ -36,7 +36,7 @@ md"
 Imports and installations. Please make sure that these packages are already existent in your global environment. If not, use the Julia REPL to add these packages using
 ```julia
 julia> ]
-(v1.5) pkg> add Pluto, Zygote, Plots, PyPlot
+(v1.5) pkg> add Zygote, Plots, PyPlot, PlutoUI
 ```
 Make sure that the `matlplotlib` python library is installed to make use of the PyPlot backend.
 "
@@ -100,15 +100,15 @@ end
 # ╔═╡ Cell order:
 # ╟─4419ca0c-80ea-11eb-38e0-9dc5d25fa2c2
 # ╠═b7d9dd1e-80d7-11eb-0fc1-2d52414a9e70
-# ╟─5d1db0b8-80ea-11eb-24d3-0d5cad7eb115
-# ╟─07ca21ee-80d8-11eb-26f5-3927b8d5af66
+# ╠═5d1db0b8-80ea-11eb-24d3-0d5cad7eb115
+# ╠═07ca21ee-80d8-11eb-26f5-3927b8d5af66
 # ╟─0008da96-80eb-11eb-1b44-15ac852eae50
 # ╠═b74929b4-80d8-11eb-08d6-f52ce81e4da4
 # ╠═67ad8506-80da-11eb-24f7-e51bb7920132
-# ╟─bedd024c-80d9-11eb-0c43-21f9a1ff1156
-# ╟─2996edf0-80da-11eb-3490-f31a92f220e4
-# ╟─2ee7fb5a-80da-11eb-0926-5ff63ca492f2
-# ╟─c0069600-80da-11eb-30af-29ca785dfa40
-# ╟─38311552-80da-11eb-220d-2d19a19b9678
+# ╠═bedd024c-80d9-11eb-0c43-21f9a1ff1156
+# ╠═2996edf0-80da-11eb-3490-f31a92f220e4
+# ╠═2ee7fb5a-80da-11eb-0926-5ff63ca492f2
+# ╠═c0069600-80da-11eb-30af-29ca785dfa40
+# ╠═38311552-80da-11eb-220d-2d19a19b9678
 # ╟─9849038c-80da-11eb-0529-dde693dc3488
-# ╟─117cd7a4-80db-11eb-0ada-991b766cf962
+# ╠═117cd7a4-80db-11eb-0ada-991b766cf962
