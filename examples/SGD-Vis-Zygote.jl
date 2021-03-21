@@ -18,11 +18,14 @@ begin
 	using PlutoUI
 	using Zygote
 	using Plots
-	pyplot()
+	plotly()
 end
 
 # ╔═╡ 4419ca0c-80ea-11eb-38e0-9dc5d25fa2c2
 md"Add Library for Dark mode"
+
+# ╔═╡ dc72ce94-8758-11eb-0846-3b66ba7f962c
+html"<button onclick=present()> present </button>"
 
 # ╔═╡ b7d9dd1e-80d7-11eb-0fc1-2d52414a9e70
 begin
@@ -61,18 +64,17 @@ begin
 end
 
 # ╔═╡ 2996edf0-80da-11eb-3490-f31a92f220e4
-function descend!(opt::SGD, xₜ::Real, ∇xₜ::Real) 
-    
+function descend!(opt::SGD, xₜ::Real, ∇xₜ::Real)
     ∇xₜ *= opt.η
     xₜ -= ∇xₜ
     return xₜ
-    
+	
 end
 
 # ╔═╡ 2ee7fb5a-80da-11eb-0926-5ff63ca492f2
 function optimize!(opt::SGD, x::Real, f::Function, n::Int)
     
-    X::Vector{Float64} = []
+    X = []
     for i in 1:n 
         push!(X, x)
         ∇x = gradient(x -> f(x), x)[1]
@@ -82,7 +84,7 @@ function optimize!(opt::SGD, x::Real, f::Function, n::Int)
 end 
 
 # ╔═╡ c0069600-80da-11eb-30af-29ca785dfa40
-f(x) = x^2
+f(x::Real) = x ^ 2  
 
 # ╔═╡ 38311552-80da-11eb-220d-2d19a19b9678
 opt = SGD(η)
@@ -97,8 +99,12 @@ begin
 	plot!(xlims=(-10,10), ylims=(0, 100))
 end
 
+# ╔═╡ 62e0efe8-8981-11eb-03db-9da240116edb
+
+
 # ╔═╡ Cell order:
 # ╟─4419ca0c-80ea-11eb-38e0-9dc5d25fa2c2
+# ╠═dc72ce94-8758-11eb-0846-3b66ba7f962c
 # ╠═b7d9dd1e-80d7-11eb-0fc1-2d52414a9e70
 # ╠═5d1db0b8-80ea-11eb-24d3-0d5cad7eb115
 # ╠═07ca21ee-80d8-11eb-26f5-3927b8d5af66
@@ -110,5 +116,6 @@ end
 # ╠═2ee7fb5a-80da-11eb-0926-5ff63ca492f2
 # ╠═c0069600-80da-11eb-30af-29ca785dfa40
 # ╠═38311552-80da-11eb-220d-2d19a19b9678
-# ╟─9849038c-80da-11eb-0529-dde693dc3488
+# ╠═9849038c-80da-11eb-0529-dde693dc3488
 # ╠═117cd7a4-80db-11eb-0ada-991b766cf962
+# ╠═62e0efe8-8981-11eb-03db-9da240116edb

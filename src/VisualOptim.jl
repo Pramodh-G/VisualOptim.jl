@@ -1,11 +1,12 @@
 module VisualOptim
 
-export Optimizer, FirstOrder, update!
+export Optimizer, FirstOrder,
+        update!, rosenbrock, rastrigin
 
 abstract type Optimizer end
 abstract type FirstOrder <: Optimizer end
 
-end
-
 include("update.jl")
 include("lossfunctions.jl")
+
+end

@@ -8,11 +8,11 @@ function update!(x::Vector{T}, x̄::Vector{T}) where T <: Real
 end
 
 """
-    update!(opt, w, g)
+    update!(opt, x, g)
 
-Updates array `w` according to gradient `g`
+Updates array `x` according to gradient `g`
 with respect to optimizer `opt`.
 """
-function update!(opt::Optimizer, w::Vector{T}, g::Vector{T}) where T <: Real
-    return w .-= apply(opt, w, g)
+function update!(opt::Optimizer, x::Vector{T}, g::Vector{T}) where T <: Real
+    return x .-= apply(opt, x, g)
 end
