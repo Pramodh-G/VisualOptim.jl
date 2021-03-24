@@ -36,4 +36,4 @@ after_success:
       using Pkg
       Pkg.add("Coverage")
       using Coverage
-      Codecov.submit(process_folder())'
+      Coveralls.submit(process_folder())'
