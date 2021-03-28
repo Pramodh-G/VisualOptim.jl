@@ -1,12 +1,9 @@
 module VisualOptim
 
-export Optimizer, FirstOrder,
-        update!, rosenbrock, rastrigin
-
-abstract type Optimizer end
-abstract type FirstOrder <: Optimizer end
+export update!, rosenbrock, rastrigin
 
 include("update.jl")
-include("lossfunctions.jl")
+include("lossfunction.jl")
+include("optimizer.jl")
 
 end

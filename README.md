@@ -17,9 +17,8 @@ Gradient Calculations based on [Zygote.jl](https://github.com/FluxML/Zygote.jl)
 
 ## TO-DO
 
-- [ ] Add StaticArrays.jl support
-- [ ] `SGD`
-- [ ] Add basic tester functions
+- [x] Add basic tester functions
+- [x] `SGD`
 - [ ] Deploy visualizations using binder + Pluto.jl
 - [ ] Other basic Optimizsrs
 - [ ] One Advanced Optimiser

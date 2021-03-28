@@ -14,6 +14,6 @@ end
 Updates array `x` according to gradient `g`
 with respect to optimizer `opt`.
 """
-function update!(opt::Optimizer, x::Vector{T}, g::Vector{T}) where T <: Real
+function update!(opt, x::Vector{T}, g::Vector{T}) where T <: Real
     return x .-= apply!(opt, x, g)
 end
