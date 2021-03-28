@@ -9,9 +9,13 @@ using Test
     end
 
     @testset "rastrigin tests" begin
-        for i in 1:5
-            @test rastrigin([i, i]) ≈ 2i^2
+        for i = 1:5
+            @test rastrigin(i , i) ≈ 2(i)^2
         end
     end
 
+    @testset "rosenbrock tests" begin
+            @test rosenbrock(1, 1) == 0
+            @test rosenbrock(3, 3) == 3604
+    end
 end
