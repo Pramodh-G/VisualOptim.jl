@@ -13,11 +13,7 @@ makedocs(;
         canonical="https://Pramodh-G.github.io/VisualOptim.jl",
         assets=String[],
     ),
-    pages=[
-        "Home" => "index.md",
-    ],
+    pages=["Home" => "index.md"],
 )
 
-deploydocs(;
-    repo="github.com/Pramodh-G/VisualOptim.jl",
-)
+deploydocs(; repo="github.com/Pramodh-G/VisualOptim.jl")

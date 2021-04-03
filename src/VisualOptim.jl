@@ -1,9 +1,9 @@
 module VisualOptim
 
-export update!, rosenbrock, rastrigin
+export update!, optimize!, rosenbrock, rastrigin, Descent
 
 include("update.jl")
 include("lossfunction.jl")
 include("optimizer.jl")
-
+include("utils.jl")
 end
