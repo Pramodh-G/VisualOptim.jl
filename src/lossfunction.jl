@@ -1,3 +1,5 @@
+export rosenbrock, rastrigin
+
 """
 The rastrigin function is notorious for having multiple local minima and only one global optima at (0,0)
 

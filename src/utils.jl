@@ -6,6 +6,6 @@ using ForwardDiff: GradientConfig, Chunk
 This is a utility function for returning the `GradientConfig`. Here, `chunk` is the Chunk number, `f` is the function to be optimized, `x` is the input vector;
 is primarily used to generate more information about the sizes of inputs, thus causing speedups.
 """
-function grad_cfg(f, x::AbstractVector, chunk)
+function grad_cfg(f, x::AbstractVector; chunk=nothing)
     return isnothing(chunk) ? GradientConfig(f, x) : GradientConfig(f, x, Chunk{chunk}())
 end

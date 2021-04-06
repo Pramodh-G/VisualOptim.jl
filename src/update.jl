@@ -1,4 +1,7 @@
 using ForwardDiff: gradient!
+
+export update!, optimize!
+
 """
     update!(x, x̄)
 
@@ -27,7 +30,7 @@ function optimize!(
     x::AbstractVector{T}, f::Function, opt; iter::Int=10, chunk::Union{Int, Nothing}=2
 ) where {T <: AbstractFloat}
     grad = similar(x)
-    cfg = grad_cfg(f, x, chunk)
+    cfg = grad_cfg(f, x; chunk=chunk)
     for i in 1:iter
         gradient!(grad, f, x, cfg)
         update!(opt, x, grad)

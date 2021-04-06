@@ -1,3 +1,5 @@
+export Descent
+
 mutable struct Descent
     eta::Float64
 end
