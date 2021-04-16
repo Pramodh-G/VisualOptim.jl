@@ -7,5 +7,5 @@ end
 Descent() = Descent(0.1)
 
 function apply!(o::Descent, x, ∆)
-    return ∆ .*= o.eta
+     ∆ .*= o.eta
 end

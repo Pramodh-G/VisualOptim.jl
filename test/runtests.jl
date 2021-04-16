@@ -6,8 +6,12 @@ using Test
 @testset "VisualOptim.jl" begin
     @testset "update! tests" begin
         @testset "update! AbstractArray tests" begin
-            @test update!(ones(100), ones(100)) == zeros(100)
-            @test update!(Float64[5.3, 5.4], Float64[2.5, 2.4]) ≈ Float64[2.8, 3]
+            a =ones(100)
+            update!(a, ones(100))
+            @test a == zeros(100)
+            a = Float64[5.3, 5.4]
+            update!(a, Float64[2.5, 2.4])
+            @test a ≈Float64[2.8, 3]
         end
     end
 

@@ -14,7 +14,7 @@ function rosenbrock(x::Vector{T}) where {T <: AbstractFloat}
     a = one(eltype(x))
     b = 100 * a
     for i in 1:(length(x) - 1)
-        f += b * (x[i + 1] - x[i]^2)^2 + (a - x[i])^2
+       @inbounds f += b * (x[i + 1] - x[i]^2)^2 + (a - x[i])^2
     end
     return f
 end
